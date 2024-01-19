@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MyNavbar from './MyNavbar';
+import Footer from './Footer';
+import Weather from './Internship-App/WeatherApp/Weather';
+import News from './Internship-App/NewsApp/News';
+import FullCalendar from './Internship-App/FullCalendar/FullCalendar';
+import EmpManagement from './Internship-App/EmpManagement/EmpManagement';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <>
+        <div>
+          <MyNavbar />
+        </div>
+        <br />
+        <div>
+          <Routes>
+            <Route path="/Weather" element={<Weather />} />
+            <Route path="/News" element={<News />} />
+            <Route path="/fullcalendar" element={<FullCalendar />} />
+            <Route path="/" element={<EmpManagement />} />
+          </Routes>
+        </div>
+        <div>
+          <Footer />
+        </div>
+      </>
+    </Router>
   );
-}
+};
 
 export default App;
