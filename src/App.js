@@ -16,10 +16,11 @@ const App = () => {
         <br />
         <div>
           <Routes>
-            <Route path="/Weather" element={<Weather />} />
+            <Route path="/" element={<Weather />} />
+
             <Route path="/News" element={<News />} />
             <Route path="/fullcalendar" element={<FullCalendar />} />
-            <Route path="/" element={<EmpManagement />} />
+            <Route path="/empmanagement" element={<EmpManagement />} />
           </Routes>
         </div>
         <div>
