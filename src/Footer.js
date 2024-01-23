@@ -40,7 +40,7 @@ const Footer = () => {
                 </Row>
             </Container>
             <div className="text-center py-3 bg-dark text-white">
-                <p>&copy; {new Date().getFullYear()} Your Company Name. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} WebKorps Technologie. All rights reserved.</p>
             </div>
         </footer>
     );
